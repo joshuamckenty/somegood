@@ -6,7 +6,6 @@ applications:
   host: somegood
   domain: cfapps.io
   path: .
-  command: gunicorn somegood:app
   buildpack: https://github.com/joshuamckenty/heroku-buildpack-python
   # services:
   #   minipactdb:
