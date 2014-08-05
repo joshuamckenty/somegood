@@ -1,0 +1,4 @@
+box: wercker/default
+deploy:
+    steps:
+        - joshuamckenty/cloud-foundry-deploy
