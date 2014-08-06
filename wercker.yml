@@ -1,4 +1,7 @@
-box: wercker/default
+box: joshuamckenty/cloud-foundry-box
 deploy:
     steps:
+        - joshuamckenty/cloud-foundry-env:
+            appname: somegood
+            keyname: ORCHESTRATE_KEY
         - joshuamckenty/cloud-foundry-deploy
