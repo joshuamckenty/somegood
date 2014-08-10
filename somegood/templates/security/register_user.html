@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+{% block content %}
+        <h1>Register for an account</h1>
+        
+        <h3>HasTwoParents needs just one simple piece of info: your current email address.</h3>
+		<p>Note that you can set up as many HasTwoParents.com email addresses as you need, for each of your children, within a single HasTwoParents.com account.</p>
+			
+{% from "security/_macros.html" import render_field_with_errors, render_field %}
+{% include "security/_messages.html" %}
+			<form action="{{ url_for_security('register') }}" method="POST" name="register_user_form" class="form-horizontal" role="form">
+			  {{ register_user_form.hidden_tag() }}
+			<div class="form-group">
+			  {{ render_field_with_errors(register_user_form.email, class_="form-control") }}
+			</div>
+			<div class="form-group">
+			  {{ render_field_with_errors(register_user_form.password, class_="form-control") }}
+			</div>
+			  {% if register_user_form.password_confirm %}
+			<div class="form-group">
+			    {{ render_field_with_errors(register_user_form.password_confirm, class_="form-control") }}
+			</div>
+			  {% endif %}
+			<div class="form-group">
+				<div class="col-lg-offset-2 col-lg-4">
+				<button type="submit" class="btn btn-default">Register</button>
+				</div>
+			</div>
+			</form>
+
+Already have an account? Simply <a href="{{ url_for_security('login') }}">login</a>.			
+			
+{% endblock %}

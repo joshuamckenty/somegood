@@ -1,0 +1,9 @@
+Welcome {{ user.email }}!
+
+{% if security.confirmable %}
+You can confirm your email through the link below:
+
+{{ confirmation_link }}
+{% endif %}
+
+I hope that you'll find HasTwoParents.com useful - if you have any questions or suggestions, please feel free to drop me a line at josh@beanpatch.net.

@@ -1,0 +1,9 @@
+<p>Welcome {{ user.email }}!</p>
+
+{% if security.confirmable %}
+<p>You can confirm your email through the link below:</p>
+
+<p><a href="{{ confirmation_link }}">Confirm my account</a></p>
+{% endif %}
+
+<p>I hope that you'll find HasTwoParents.com useful - if you have any questions or suggestions, please feel free to drop me a line at josh@beanpatch.net.</p>

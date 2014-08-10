@@ -1,0 +1,125 @@
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+html, body, h1, h2, p, div, h3, h4 {
+  font-family: "open-sans",sans-serif !important;
+}
+
+p {
+	font-size: 110%;
+}
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+/* .body-content {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+*/
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  /* Let the jumbotron breathe */
+  .jumbotron {
+    margin-top: 20px;
+  }
+  /* Remove padding from wrapping element since we kick in the grid classes here */
+  .body-content {
+    padding: 0;
+	font-size: 125%;
+  }
+	.container {
+		width: 80.0em !important;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	body {
+		padding: 30px;
+	}
+}
+
+.big-image {
+	width: 100%;
+}
+
+#eric-box {
+	background-image: url(/static/img/storm_trooper.jpg);
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+.flying-well, .happy-well {
+	background-image: url(/static/img/flying.jpg);
+	background-size: cover;
+	background-position: bottom right;
+	background-repeat: no-repeat;
+	padding-bottom: 600px;
+}
+
+.happy-well {
+	background-image: url(/static/img/happy-lego.jpg);
+	background-position: top right;
+	padding-bottom: 100px;
+}
+
+@font-face{
+	font-family:'ecoico';
+	src:url("../icons/fonts/ecoico.eot")	;
+	src:url("../icons/fonts/ecoico.eot?#iefix") format("embedded-opentype"),
+	url("../icons/fonts/ecoico.woff") format("woff"),
+	url("../icons/fonts/ecoico.ttf") format("truetype"),
+	url("../icons/fonts/ecoico.svg#ecoico") format("svg");
+	font-weight:normal;
+	font-style:normal
+}
+[data-icon]:before{
+	font-family:'ecoico';
+	content:attr(data-icon);
+	speak:none;
+	font-weight:normal;
+	font-variant:normal;
+	text-transform:none;
+	line-height:1;
+	-webkit-font-smoothing:antialiased
+}
+
+.icon-alone{
+	display:inline-block
+}
+
+#somegood-logo-icon {
+	color: rgb(9, 159, 243);
+}
+#somegood-logo {
+	color: white;
+	font-weight: 600;
+}
+
+.navbar {
+	background-color: rgb(61, 62, 64);
+}
+
+.navbar-brand {
+	max-width: 100% !important;
+}
+.light {
+	border-color: white;
+}
+
+.blockquote-media {
+	width: 3em;
+}
+
+.box-img {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.login-button {
+	margin-top: 14px;
+}

@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+{% block content %}
+{% from "security/_macros.html" import render_field_with_errors, render_field %}
+{% include "security/_messages.html" %}
+<h1>Login</h1>
+<form action="{{ url_for_security('login') }}" method="POST" name="login_user_form" class="form-horizontal" role="form">
+  {{ login_user_form.hidden_tag() }}
+<div class="form-group">
+  {{ render_field_with_errors(login_user_form.email, class_="form-control") }}
+</div>
+<div class="form-group">
+  {{ render_field_with_errors(login_user_form.password, class_="form-control") }}
+</div>
+<div class="form-group">
+    <div class="col-lg-offset-2 col-lg-4">
+      <div class="checkbox">
+        <label>
+          {{ render_field(login_user_form.remember) }} Remember me
+        </label>
+      </div>
+    </div>
+</div>
+  {{ render_field(login_user_form.next) }}
+<div class="form-group">
+  	<div class="col-lg-offset-2 col-lg-4">
+	<button type="submit" class="btn btn-default">Login</button>
+	</div>
+</div>
+</form>
+<a href="/reset">Forgot your password?</a><br/>
+
+<h3>Don't have an account yet? Simply <a href="/register">sign up</a> for a free account now.</h3>
+{% endblock %}
