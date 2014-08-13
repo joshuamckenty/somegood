@@ -10,4 +10,7 @@ deploy:
         - joshuamckenty/cloud-foundry-env:
             appname: somegood
             keyname: SOMEGOOD_PHAXIO_SECRET
+        - joshuamckenty/cloud-foundry-env:
+            appname: somegood
+            keyname: SOMEGOOD_SERVER_NAME
         - joshuamckenty/cloud-foundry-deploy
