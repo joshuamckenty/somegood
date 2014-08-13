@@ -8,12 +8,18 @@ This is a placeholder for now.
 import os
 from porc import Client
 from flask import Flask
+from flask.ext.appconfig import AppConfig
 # from flask.ext.sqlalchemy import SQLAlchemy, models_committed
 # from flask_mail import Mail
 
-app = Flask(__name__)
-app.config.from_object('somegood.config')
-app.config.from_envvar('SOMEGOOD_SETTINGS', silent=True)
+
+def create_app(configfile=None):
+    app = Flask(__name__)
+    AppConfig(app, configfile)
+    return app
+
+
+app = create_app()
 
 # mail = Mail(app)
 # db = SQLAlchemy(app)
