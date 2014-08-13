@@ -4,4 +4,10 @@ deploy:
         - joshuamckenty/cloud-foundry-env:
             appname: somegood
             keyname: ORCHESTRATE_KEY
+        - joshuamckenty/cloud-foundry-env:
+            appname: somegood
+            keyname: SOMEGOOD_PHAXIO_KEY
+        - joshuamckenty/cloud-foundry-env:
+            appname: somegood
+            keyname: SOMEGOOD_PHAXIO_SECRET
         - joshuamckenty/cloud-foundry-deploy
