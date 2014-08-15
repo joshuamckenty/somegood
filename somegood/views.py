@@ -13,9 +13,9 @@ PHAXIO_URL = "https://api.phaxio.com/v1/send"
 def hello_world():
     return render_template('index.html')
 
-@app.route('/faxdata.txt')
+@app.route('/faxdata')
 def faxdata():
-    return "This is my fax text.", 200
+    return "This is my fax text.", 200, {'Content-Type': 'text/plain'}
 
 @app.route('/sendfax')
 def send_fax():

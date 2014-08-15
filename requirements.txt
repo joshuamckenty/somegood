@@ -2,3 +2,5 @@ flask
 gunicorn
 porc
 flask-appconfig
+reportlab
+git+https://github.com/joshuamckenty/pypdfml.git#egg=pypdfml
