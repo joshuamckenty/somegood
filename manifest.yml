@@ -6,7 +6,7 @@ applications:
   host: somegood
   domain: cfapps.io
   path: .
-  buildpack: https://github.com/joshuamckenty/heroku-buildpack-python
+  buildpack: https://github.com/joshuamckenty/buildpack-python
   # services:
   #   minipactdb:
   #     label: elephantsql
