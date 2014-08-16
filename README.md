@@ -30,4 +30,7 @@ Agile Science:
  - The benefit of creating more time to fix problems
  - The benefit of applying an experimental, scientific approach to social issues
     - Link with http://agilescience.org
-     
+
+PDF Generation:
+ - pypdfml
+ - ReportLabs

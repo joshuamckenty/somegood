@@ -4,4 +4,4 @@ porc
 flask-appconfig
 reportlab
 # git+https://github.com/joshuamckenty/pypdfml.git#egg=pypdfml
-pypdfml
+pypdfml==0.1.0alpha
